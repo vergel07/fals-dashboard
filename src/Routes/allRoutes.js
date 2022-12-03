@@ -4,6 +4,8 @@ import { Redirect } from "react-router-dom";
 //Dashboard
 import DashboardEcommerce from "../pages/DashboardEcommerce";
 
+
+
 //login
 import Login from "../pages/Authentication/Login";
 import ForgetPasswordPage from "../pages/Authentication/ForgetPassword";
@@ -13,6 +15,9 @@ import Register from "../pages/Authentication/Register";
 // User Profile
 import UserProfile from "../pages/Authentication/user-profile";
 
+//Payments
+import Payments from "../pages/Payments";
+
 const authProtectedRoutes = [
 
   { path: "/dashboard", component: DashboardEcommerce },
@@ -20,6 +25,10 @@ const authProtectedRoutes = [
 
   //User Profile
   { path: "/profile", component: UserProfile },
+
+  //Payments
+  { path: "/payments", component: Payments },
+
 
   // this route should be at the end of all other routes
   // eslint-disable-next-line react/display-name

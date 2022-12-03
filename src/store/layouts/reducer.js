@@ -29,16 +29,16 @@ import {
 
 const INIT_STATE = {
   layoutType: layoutTypes.VERTICAL,
-  leftSidebarType: leftSidebarTypes.DARK,
-  layoutModeType: layoutModeTypes.DARKMODE,
+  leftSidebarType: leftSidebarTypes.GRADIENT,
+  layoutModeType: layoutModeTypes.LIGHTMODE,
   layoutWidthType: layoutWidthTypes.FLUID,
   layoutPositionType: layoutPositionTypes.FIXED,
   topbarThemeType: topbarThemeTypes.LIGHT,
   leftsidbarSizeType: leftsidbarSizeTypes.DEFAULT,
-  leftSidebarViewType: leftSidebarViewTypes.DEFAULT,
+  leftSidebarViewType: leftSidebarViewTypes.DETACHED,
   leftSidebarImageType: leftSidebarImageTypes.NONE,
   preloader: preloaderTypes.DISABLE,
-  backgroundImageType: backgroundImageTypes.IMG3
+  backgroundImageType: backgroundImageTypes.IMG1
 };
 
 const Layout = (state = INIT_STATE, action) => {
