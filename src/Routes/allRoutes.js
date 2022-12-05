@@ -15,8 +15,17 @@ import Register from "../pages/Authentication/Register";
 // User Profile
 import UserProfile from "../pages/Authentication/user-profile";
 
-//Payments
-import Payments from "../pages/Payments";
+// Payments
+import Payment from "../pages/Payment";
+
+//C ustomers
+import Customer from "../pages/Customer";
+
+// Developers
+import Developer from "../pages/Developer";
+
+// Settings
+import Setting from "../pages/Setting";
 
 const authProtectedRoutes = [
 
@@ -26,8 +35,17 @@ const authProtectedRoutes = [
   //User Profile
   { path: "/profile", component: UserProfile },
 
-  //Payments
-  { path: "/payments", component: Payments },
+  // Payments
+  { path: "/payments", component: Payment },
+
+  // Customer
+  { path: "/customer", component: Customer },
+
+  // Developers
+  { path: "/developer", component: Developer },
+
+  // Settings
+  { path: "/setting", component: Setting },
 
 
   // this route should be at the end of all other routes

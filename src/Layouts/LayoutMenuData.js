@@ -5,10 +5,10 @@ const Navdata = () => {
     const history = useHistory();
     //state data
     const [isDashboard, setIsDashboard] = useState(false);
-    const [isPayments, setIsPayments] = useState(false);
-    const [isCustomers, setIsCustomers] = useState(false);
-    const [isDevelopers, setIsDevelopers] = useState(false);
-    const [isSettings, setIsSettings] = useState(false);
+    const [isPayment, setIsPayment] = useState(false);
+    const [isCustomer, setIsCustomer] = useState(false);
+    const [isDeveloper, setIsDeveloper] = useState(false);
+    const [isSetting, setIsSetting] = useState(false);
    
     const [iscurrentState, setIscurrentState] = useState('Dashboard');
 
@@ -31,26 +31,26 @@ const Navdata = () => {
         if (iscurrentState !== 'Dashboard') {
             setIsDashboard(false);
         }
-        if (iscurrentState !== 'Payments') {
-            setIsPayments(false);
+        if (iscurrentState !== 'Payment') {
+            setIsPayment(false);
         }
-        if (iscurrentState !== 'Customers') {
-            setIsCustomers(false);
+        if (iscurrentState !== 'Customer') {
+            setIsCustomer(false);
         }
-        if (iscurrentState !== 'Developers') {
-            setIsDevelopers(false);
+        if (iscurrentState !== 'Developer') {
+            setIsDeveloper(false);
         }
-        if (iscurrentState !== 'Settings') {
-            setIsSettings(false);
+        if (iscurrentState !== 'Setting') {
+            setIsSetting(false);
         }
     }, [
         history,
         iscurrentState,
         isDashboard,
-        isPayments,
-        isCustomers,
-        isDevelopers,
-        isSettings
+        isPayment,
+        isCustomer,
+        isDeveloper,
+        isSetting
     ]);
 
     const menuItems = [
@@ -72,54 +72,54 @@ const Navdata = () => {
             },
         },
         {
-            id: "payments",
+            id: "payment",
             label: "Payments",
             icon: "ri-dashboard-2-line",
             link: "/payments",
-            stateVariables: isPayments,
+            stateVariables: isPayment,
             click: function (e) {
                 e.preventDefault();
-                setIsDashboard(!isPayments);
-                setIscurrentState('Payments');
+                setIsDashboard(!isPayment);
+                setIscurrentState('Payment');
                 updateIconSidebar(e);
             },
         },
         {
-            id: "customers",
+            id: "customer",
             label: "Customers",
             icon: "ri-dashboard-2-line",
-            link: "/customers",
-            stateVariables: isCustomers,
+            link: "/customer",
+            stateVariables: isCustomer,
             click: function (e) {
                 e.preventDefault();
-                setIsDashboard(!isCustomers);
-                setIscurrentState('Customers');
+                setIsDashboard(!isCustomer);
+                setIscurrentState('Customer');
                 updateIconSidebar(e);
             },
         },
         {
-            id: "developers",
+            id: "developer",
             label: "Developers",
             icon: "ri-dashboard-2-line",
-            link: "/developers",
-            stateVariables: isDevelopers,
+            link: "/developer",
+            stateVariables: isDeveloper,
             click: function (e) {
                 e.preventDefault();
-                setIsDashboard(!isDevelopers);
-                setIscurrentState('Developers');
+                setIsDashboard(!isDeveloper);
+                setIscurrentState('Developer');
                 updateIconSidebar(e);
             },
         },
         {
-            id: "settings",
+            id: "setting",
             label: "Settings",
             icon: "ri-dashboard-2-line",
-            link: "/settings",
-            stateVariables: isSettings,
+            link: "/setting",
+            stateVariables: isSetting,
             click: function (e) {
                 e.preventDefault();
-                setIsDashboard(!isSettings);
-                setIscurrentState('Settings');
+                setIsDashboard(!isSetting);
+                setIscurrentState('Setting');
                 updateIconSidebar(e);
             },
         },
